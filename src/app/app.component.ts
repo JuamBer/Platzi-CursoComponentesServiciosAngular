@@ -48,6 +48,6 @@ export class AppComponent {
   ];
 
   onImgLoaded(img: string) {
-    console.log('log padre', img);
+    console.log('onImgLoaded()', img);
   }
 }
