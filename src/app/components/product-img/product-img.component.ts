@@ -22,7 +22,6 @@ export class ProductImg implements OnInit, OnChanges, AfterViewInit, OnDestroy {
 
   @Output() loaded: EventEmitter<string> = new EventEmitter<string>();
   imageDefault: string = './assets/images/default.png';
-  counter: number = 0;
   counterFn: number | undefined;
 
   constructor() {
@@ -33,10 +32,6 @@ export class ProductImg implements OnInit, OnChanges, AfterViewInit, OnDestroy {
     //before render
     //async - once time
     console.log("ngOnInit()", 'imgValue => ', this.img);
-    this.counterFn = window.setInterval(()=>{
-      this.counter++;
-      console.log('run counter');
-    },1000);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
