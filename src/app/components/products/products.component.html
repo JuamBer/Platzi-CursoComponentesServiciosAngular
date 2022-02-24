@@ -4,6 +4,21 @@
     Cantidad: {{ myShoppingCart.length }}
     TotalPrice: {{ totalPrice }}
   </p>
+  <p>
+    {{ today | date:'short'  }}
+  </p>
+  <p>
+    {{ other_date | date:'yyyy.dd.MM'  }}
+  </p>
+  <p>
+    {{ other_date | timeAgo  }}
+  </p>
+  <p>
+    {{ 'HoLA mUNDo' | uppercase  }}
+  </p>
+  <p>
+    {{ 'Mi Pipe' | reverse  }}
+  </p>
   <app-product
     [product]="product"
     *ngFor="let product of products"

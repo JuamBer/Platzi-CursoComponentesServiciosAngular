@@ -1,8 +1,8 @@
 
 <div class="product">
-  <app-product-img [img]="product.image" [alt]="product.name"></app-product-img>
-  <h2>{{ product.price }}</h2>
-  <p>{{ product.name }}</p>
+  <app-product-img [img]="product.image" [alt]="product.title"></app-product-img>
+  <h2>{{ product.price | currency:'€' }}</h2>
+  <p>{{ product.title }}</p>
   <button (click)="onAddToCart()">Add cart</button>
 </div>
 
